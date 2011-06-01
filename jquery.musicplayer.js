@@ -8,7 +8,7 @@
       var a = document.createElement("audio");
       if (a.play) {
         var link = $(this).attr('href');
-        $(this).append('<audio>').children('audio')
+        $(this).append('<audio preload="auto">').children('audio')
                 .append("<source type='audio/ogg' src='"+link+"'>")
                 .append("<source type='audio/mpeg' src='"+link.replace(/ogg$/gi,"mp3")+"'>");
         $(this).click(function () {
